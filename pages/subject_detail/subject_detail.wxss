@@ -1,1 +1,15 @@
 /* pages/subject_detail/subject_detail.wxss */
+.each_subject{
+  background-color: white;
+  padding-left: 10px;
+}
+.title{
+  font: 36px;
+  color: purple;
+}
+.content{
+  padding-bottom: 10px;
+}
+.footer{
+  padding-bottom:10px;
+}

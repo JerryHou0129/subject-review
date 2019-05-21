@@ -1,7 +1,7 @@
 <!--pages/subject_overall_template/subject_overall_template.wxml-->
 <template name="universities">
   <view class="title">{{code}} {{name}} \n</view>
-  <text>2 Assignments : 40% \n</text>
-  <text>1 Examinnation : 60%</text>
+  <text>2 Assignments : {{assig}} \n</text>
+  <text>1 Examinnation : {{exam}}</text>
   <view class="footer"></view>
 </template>

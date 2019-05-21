@@ -7,6 +7,9 @@
   font: 36px;
   color: purple;
 }
+.content{
+  padding-bottom: 10px;
+}
 .footer{
   padding-bottom:10px;
 }

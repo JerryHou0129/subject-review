@@ -5,10 +5,9 @@
 
   <block wx:for="{{subjects}}">
     <view class="each_subject" bindtap='tapSubject' id="{{index}}">
-      <template is="universities" data="{{code:item.code,name:item.name}}" />
+      <template is="universities" data="{{code:item.code,name:item.name,assig:item.assig, exam:item.exam}}" />
     </view>
   </block>
-
 
 
 </view>

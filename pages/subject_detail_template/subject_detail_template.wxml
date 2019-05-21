@@ -1,8 +1,15 @@
 <!--pages/subject_detail_template/subject_detail_template.wxml-->
-<template name="subjectsa">
-  <view class="title">课程代码{{code}} \n</view>
-  <text>课程名 {{name}}\n</text>
-  <text>难度  3333333</text>
-  <text>满意度 4444444</text>
-  <view class="footer"></view>
+<template name="subjects">
+  <view>  
+    <view  class="title">课程代码 </view>
+    <view class="content">{{code}} \n </view>
+  </view>
+  <view>
+    <view  class="title">课程名 </view>
+    <view class="content">{{name}}\n </view>
+  </view>
+  <view>
+    <view  class="title">课程简介 </view>
+    <view class="content">{{content}}\n </view>
+  </view>
 </template>

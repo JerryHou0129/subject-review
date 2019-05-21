@@ -1,6 +1,8 @@
 <!--pages/subject_detail/subject_detail.wxml-->
+<import src="../subject_detail_template/subject_detail_template.wxml" />
 
 <view>
-  <view class="weui-cell__bd">{{subjects.code}}</view>
-  <view class="weui-cell__ft">{{subjects.name}}</view>
+    <view class="each_subject"  id="{{index}}">
+      <template is="subjects" data="{{code:subjects.code,name:subjects.name, content:subjects.content}}" />
+    </view>
 </view>
