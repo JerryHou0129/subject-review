@@ -1,0 +1,6 @@
+<!--pages/subject_detail/subject_detail.wxml-->
+
+<view>
+  <view class="weui-cell__bd">{{subjects.code}}</view>
+  <view class="weui-cell__ft">{{subjects.name}}</view>
+</view>

@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view>
+  <view class='container'>广告</view>
+  <view class="weui-cells__title">大学列表</view>
+  <view class="weui-cells">
+
+    <view class="weui-cell" bindtap="tapUni">
+      <view class="weui-cell__bd">
+        <text>墨尔本大学</text>
+      </view>
+      <view class="weui-cell__ft">xxx</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <text>莫纳什大学</text>
+      </view>
+      <view class="weui-cell__ft">xxx</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <text>RMIT</text>
+      </view>
+      <view class="weui-cell__ft">xxx</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <text>Deakin</text>
+      </view>
+      <view class="weui-cell__ft">xxx</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <text>xxxx大学</text>
+      </view>
+      <view class="weui-cell__ft">xxx</view>
+    </view>
+    
+    <block wx:for="{{universities}}">
+      <view class="weui-cell" bindtap="tapUni">
+        <view class="weui-cell__bd">
+          <text>{{item.uni}}</text>
+        </view>
+        <view class="weui-cell__ft">xxx</view>
+      </view>
+    </block>
+
+  </view>
+</view>

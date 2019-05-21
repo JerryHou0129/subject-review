@@ -1,0 +1,12 @@
+/* pages/subject_overall_template/subject_overall_template.wxss */
+.each_subject{
+  background-color: white;
+  padding-left: 10px;
+}
+.title{
+  font: 36px;
+  color: purple;
+}
+.footer{
+  padding-bottom:10px;
+}

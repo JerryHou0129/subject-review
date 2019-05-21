@@ -1,0 +1,14 @@
+<!--pages/uom/uom.wxml-->
+<import src="../subject_overall_template/subject_overall_template.wxml" />
+<view>
+  <include src="../searchbar/searchbar" />
+
+  <block wx:for="{{subjects}}">
+    <view class="each_subject" bindtap='tapSubject' id="{{index}}">
+      <template is="universities" data="{{code:item.code,name:item.name}}" />
+    </view>
+  </block>
+
+
+
+</view>

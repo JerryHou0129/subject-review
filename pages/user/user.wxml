@@ -1,0 +1,29 @@
+<!--pages/user/user.wxml-->
+<view>
+  <view class="userinfo">
+    <view class="userinfo-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName"></open-data>
+  </view>
+
+  <view class="weui-cells__title">个人设置</view>
+  <view class="weui-cells">
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <text>Jerry</text>
+      </view>
+      <view class="weui-cell__ft">说明文字</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <text>爱好</text>
+      </view>
+      <view class="weui-cell__ft">说明文字</view>
+    </view>
+
+  </view>
+
+</view>
