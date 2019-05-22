@@ -1,4 +1,5 @@
 /* pages/uom/uom.wxss */
+@import "../searchbar/searchbar.wxss";
 .each_subject{
   background-color: white;
   padding-left: 10px;
