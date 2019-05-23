@@ -5,13 +5,16 @@ Page({
   data: {
     inputShowed: false,
     inputVal: "",
-    subjects: [{
+    subjects: {
+      "comp10001":
+      {
         code: "comp10001",
         name: "Foundation of Computing",
         content: "Some bullshit and balabalablabalbalblablaalb",
         assig: "40%",
         exam: "60%"
       },
+      "comp10002":
       {
         code: "comp10002",
         name: "Foundation of Algorithms",
@@ -19,6 +22,7 @@ Page({
         assig: "30%",
         exam: "70%"
       },
+      "comp20007":
       {
         code: "comp20007",
         name: "Deisgn of algorithm",
@@ -26,6 +30,7 @@ Page({
         assig: "20%",
         exam: "80%"
       },
+      "SWEN20003":
       {
         code: "SWEN20003",
         name: "Object Oriented Software Design",
@@ -33,6 +38,7 @@ Page({
         assig: "20%",
         exam: "80%"
       },
+      "COMP30027":
       {
         code: "COMP30027",
         name: "Machine Learning",
@@ -40,6 +46,7 @@ Page({
         assig: "20%",
         exam: "80%"
       },
+      "COMP30024":
       {
         code: "COMP30024",
         name: "Artificial Intelligence",
@@ -47,6 +54,7 @@ Page({
         assig: "20%",
         exam: "80%"
       },
+      "COMP30020":
       {
         code: "COMP30020",
         name: "IT Project",
@@ -54,6 +62,7 @@ Page({
         assig: "20%",
         exam: "80%"
       },
+      "SWEN30006":
       {
         code: "SWEN30006",
         name: "Software Modelling Design",
@@ -61,11 +70,16 @@ Page({
         assig: "20%",
         exam: "80%"
       }
-    ]
+    }
   },
 
   tapSubject: function(event) {
-    console.log(JSON.stringify(this.data.subjects[event.currentTarget.id]))
+    
+    //console.log("saonima")
+    //console.log(event)
+    //console.log(event.currentTarget.id)
+    //console.log(this.data.subjects["comp10001"])
+    //console.log(JSON.stringify(this.data.subjects)) // Todo 
     wx.navigateTo({
       url: '../subject_detail/subject_detail?subjects=' + JSON.stringify(this.data.subjects[event.currentTarget.id]),
     })
@@ -121,8 +135,10 @@ Page({
   mySearchFunction: function(value) {
     // do your job here
     // 跳转
+    console.log("saosndoaidjsodjasodjsa")
+    console.log(value);
     wx.redirectTo({
-      url: '../index/index?searchValue=' + value
+      url: '../subject_detail/subject_detail?subjects=' + JSON.stringify(this.data.subjects[value]),
     })
   },
 
