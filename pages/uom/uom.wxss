@@ -2,12 +2,29 @@
 @import "../searchbar/searchbar.wxss";
 .each_subject{
   background-color: white;
+}
+.abstract{
   padding-left: 10px;
 }
 .title{
   font: 36px;
   color: purple;
+  padding-bottom: 10px;
+  padding-top: 10px
 }
 .footer{
-  padding-bottom:10px;
+  padding-bottom:12px;
+  margin-top: 10px;
+  background-color: rgba(200, 200, 200, 0.1)
+
+}
+.one{
+  padding-bottom: 10px;
+}
+.right{
+  float: right;
+  padding-right: 10px
+}
+.left{
+  text-align: left
 }

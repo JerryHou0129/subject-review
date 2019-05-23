@@ -1,7 +1,15 @@
 <!--pages/subject_overall_template/subject_overall_template.wxml-->
 <template name="universities">
-  <view class="title">{{code}} {{name}} \n</view>
-  <text>2 Assignments : {{assig}} \n</text>
-  <text>1 Examinnation : {{exam}}</text>
+  <view class="abstract">
+    <view class="title">{{code}} {{name}} \n</view>
+    <view class="one">
+      <view class="left">难度 : {{difficulty}}
+        <text class="right"> 满意度 : {{satisfication}}</text>
+      </view>
+    </view>
+
+    <view>大一基础计算机</view>
+  </view>
   <view class="footer"></view>
+  
 </template>

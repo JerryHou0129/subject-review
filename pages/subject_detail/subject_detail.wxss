@@ -13,3 +13,14 @@
 .footer{
   padding-bottom:10px;
 }
+
+.one{
+  padding-bottom: 10px;
+}
+.right{
+  float: right;
+  padding-right: 10px
+}
+.left{
+  text-align: left
+}

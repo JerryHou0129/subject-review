@@ -1,15 +1,1 @@
 /* pages/subject_detail_template/subject_detail_template.wxss */
-.each_subject{
-  background-color: white;
-  padding-left: 10px;
-}
-.title{
-  font: 36px;
-  color: purple;
-}
-.content{
-  padding-bottom: 10px;
-}
-.footer{
-  padding-bottom:10px;
-}

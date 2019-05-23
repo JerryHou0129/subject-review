@@ -3,6 +3,6 @@
 
 <view>
     <view class="each_subject"  id="{{index}}">
-      <template is="subjects" data="{{code:subjects.code,name:subjects.name, content:subjects.content}}" />
+      <template is="subjects" data="{{code:subjects.code,name:subjects.name, content:subjects.content,difficulty:subjects.difficulty,satisfication:subjects.satisfication}}" />
     </view>
 </view>

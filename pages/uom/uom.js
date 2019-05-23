@@ -6,29 +6,36 @@ Page({
     inputShowed: false,
     inputVal: "",
     subjects: {
-      "comp10001":
+      "COMP10001":
       {
-        code: "comp10001",
+        code: "COMP10001",
         name: "Foundation of Computing",
         content: "Some bullshit and balabalablabalbalblablaalb",
         assig: "40%",
-        exam: "60%"
+        exam: "60%",
+        difficulty: "2 stars",
+        satisfication: "4 stars"
+
       },
-      "comp10002":
+      "COMP10002":
       {
-        code: "comp10002",
+        code: "COMP10002",
         name: "Foundation of Algorithms",
         content: "I havent seen this before, please shut up",
         assig: "30%",
-        exam: "70%"
+        exam: "70%",
+        difficulty: "2 stars",
+        satisfication: "4 stars"        
       },
-      "comp20007":
+      "COMP20007":
       {
-        code: "comp20007",
+        code: "COMP20007",
         name: "Deisgn of algorithm",
         content: "What is wrong with this bug No question mark ok", //不能有问号，转不好json
         assig: "20%",
-        exam: "80%"
+        exam: "80%",
+        difficulty: "2 stars",
+        satisfication: "4 stars"
       },
       "SWEN20003":
       {
@@ -36,7 +43,9 @@ Page({
         name: "Object Oriented Software Design",
         content: "What is wrong with this bug No question mark ok", //不能有问号，转不好json
         assig: "20%",
-        exam: "80%"
+        exam: "80%",
+        difficulty: "2 stars",
+        satisfication: "4 stars"
       },
       "COMP30027":
       {
@@ -44,7 +53,9 @@ Page({
         name: "Machine Learning",
         content: "What is wrong with this bug No question mark ok", //不能有问号，转不好json
         assig: "20%",
-        exam: "80%"
+        exam: "80%",
+        difficulty: "2 stars",
+        satisfication: "4 stars"
       },
       "COMP30024":
       {
@@ -52,7 +63,9 @@ Page({
         name: "Artificial Intelligence",
         content: "What is wrong with this bug No question mark ok", //不能有问号，转不好json
         assig: "20%",
-        exam: "80%"
+        exam: "80%",
+        difficulty: "2 stars",
+        satisfication: "4 stars"
       },
       "COMP30020":
       {
@@ -60,7 +73,9 @@ Page({
         name: "IT Project",
         content: "What is wrong with this bug No question mark ok", //不能有问号，转不好json
         assig: "20%",
-        exam: "80%"
+        exam: "80%",
+        difficulty: "2 stars",
+        satisfication: "4 stars"
       },
       "SWEN30006":
       {
@@ -68,7 +83,9 @@ Page({
         name: "Software Modelling Design",
         content: "What is wrong with this bug No question mark ok", //不能有问号，转不好json
         assig: "20%",
-        exam: "80%"
+        exam: "80%",
+        difficulty: "2 stars",
+        satisfication: "4 stars"
       }
     }
   },
@@ -79,10 +96,15 @@ Page({
     //console.log(event)
     //console.log(event.currentTarget.id)
     //console.log(this.data.subjects["comp10001"])
-    //console.log(JSON.stringify(this.data.subjects)) // Todo 
+    //console.log(JSON.stringify(this.data.subjects)) 
     wx.navigateTo({
       url: '../subject_detail/subject_detail?subjects=' + JSON.stringify(this.data.subjects[event.currentTarget.id]),
     })
+  },
+
+  cancelSearch: function(event){
+    console.log("asadaaddad");
+    showInput();
   },
 
   showInput: function() {
@@ -137,7 +159,7 @@ Page({
     // 跳转
     console.log("saosndoaidjsodjasodjsa")
     console.log(value);
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../subject_detail/subject_detail?subjects=' + JSON.stringify(this.data.subjects[value]),
     })
   },

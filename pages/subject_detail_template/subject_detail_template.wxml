@@ -1,15 +1,39 @@
 <!--pages/subject_detail_template/subject_detail_template.wxml-->
 <template name="subjects">
-  <view>  
-    <view  class="title">课程代码 </view>
-    <view class="content">{{code}} \n </view>
+
+  <view class="one">
+
+    <view class="left">课程代码
+      <text class="right"> {{code}}</text>
+    </view>
+    <view class="left">课程名
+      <text class="right"> {{name}}</text>
+    </view>
+    <view class="left">难度
+      <text class="right"> {{difficulty}}</text>
+    </view>
+    <view class="left">满意度
+      <text class="right"> {{satisfication}}</text>
+    </view>
+
   </view>
+
   <view>
-    <view  class="title">课程名 </view>
-    <view class="content">{{name}}\n </view>
-  </view>
-  <view>
-    <view  class="title">课程简介 </view>
+    <view class="title">课程简介 </view>
     <view class="content">{{content}}\n </view>
   </view>
+
+  <view>
+    <view class="title">Sample Assignments</view>
+    <view class="content">{{content}}\n </view>
+  </view>
+
+    <view>
+    <view class="title">Sample Exams</view>
+    <view class="content">{{content}}\n </view>
+  </view>
+
+  <button class="weui-btn" type="primary" plain="true">评价这个课程</button>
+
+  评论区
 </template>
