@@ -5,3 +5,17 @@
 .select{
   margin:0px 20px 0px auto
 }
+.img{
+  display: inline-block;
+  height: 60rpx;
+  width: 60rpx;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.emoji{
+  display: inline-block;
+  height: 46rpx;
+  width: 46rpx;
+  padding-left: 5px;
+}

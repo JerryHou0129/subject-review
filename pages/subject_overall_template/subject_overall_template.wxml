@@ -4,13 +4,20 @@
     <view class="title">{{code}} {{name}} \n</view>
     <view class="one">
       <view class="left">难度 :
-<image class="img" src="../../images/star_light.png"></image>
-<image class="img" src="../../images/star_light.png"></image>
-<image class="img" src="../../images/star_light.png"></image>
+        <image class="img" src="../../images/star_light.png"></image>
+        <image class="img" src="../../images/star_light.png"></image>
+        <image class="img" src="../../images/star_light.png"></image>
+        <view class="emoji_block">
+          <image class="emoji" src="../../images/very_sad_n.jpeg"></image>
+          <image class="emoji" src="../../images/sad_n.jpeg"></image>
+          <image class="emoji" src="../../images/neutral_n.jpeg"></image>
+          <image class="emoji" src="../../images/happy_f.jpeg"></image>
+          <image class="emoji" src="../../images/very_happy_n.jpeg"></image>
+        </view>
       </view>
     </view>
 
-    <view>大一基础计算机</view>
+    <view>{{description}}</view>
   </view>
   <view class="footer"></view>
 

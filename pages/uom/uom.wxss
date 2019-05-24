@@ -6,6 +6,16 @@
   width: 40rpx;
   padding-left: 10px;
 }
+.emoji_block{
+  display: inline-block;
+  margin-left: 60px;
+}
+.emoji{
+  display: inline-block;
+  height: 46rpx;
+  width: 46rpx;
+  padding-left: 5px;
+}
 .each_subject{
   background-color: white;
 }

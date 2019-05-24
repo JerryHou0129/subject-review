@@ -28,6 +28,7 @@
 
 
     <view class="weui-cell" bindtap="tapUni">
+      <image class="icon" src="../../uni_icon/uom.jpg"></image>
       <view class="weui-cell__bd">
         <text>墨尔本大学</text>
       </view>
@@ -35,6 +36,7 @@
     </view>
 
     <view class="weui-cell" bindtap="tapUni">
+    <image class="icon" src="../../uni_icon/monash.jpg"></image>
       <view class="weui-cell__bd">
         <text>莫纳什大学</text>
       </view>
@@ -42,6 +44,7 @@
     </view>
 
     <view class="weui-cell" bindtap="tapUni">
+    <image class="icon" src="../../uni_icon/rmit.jpg"></image>
       <view class="weui-cell__bd">
         <text>RMIT</text>
       </view>
@@ -49,6 +52,7 @@
     </view>
 
     <view class="weui-cell" bindtap="tapUni">
+    <image class="icon" src="../../uni_icon/deakin.jpg"></image>
       <view class="weui-cell__bd">
         <text>Deakin</text>
       </view>
@@ -66,6 +70,7 @@
 
     <block wx:for="{{universities}}">
       <view class="weui-cell" bindtap="tapUni">
+      <image class="icon" src="{{item.source}}"></image>
         <view class="weui-cell__bd">
           <text>{{item.uni}}</text>
         </view>

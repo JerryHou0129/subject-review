@@ -1,5 +1,6 @@
 // pages/uom/uom.js
-
+/*var arr = Object.keys(this.data.subjects);
+console.log(arr.length); //6*/ //数每个学校科目数量
 var WxSearch = require('../searchbar/searchbar.js');
 Page({
   data: {
@@ -10,11 +11,12 @@ Page({
       {
         code: "COMP10001",
         name: "Foundation of Computing",
-        content: "Some bullshit and balabalablabalbalblablaalb",
+        content: "Solving problems in areas such as business, biology, physics, chemistry, engineering, humanities, and social sciences often requires manipulating, analysing, and visualising data through computer programming.",
         assig: "40%",
         exam: "60%",
         difficulty: "2 stars",
         satisfication: "4 stars",
+        description: "Basic Python"
       },
       "COMP10002":
       {
@@ -24,7 +26,8 @@ Page({
         assig: "30%",
         exam: "70%",
         difficulty: "2 stars",
-        satisfication: "4 stars"        
+        satisfication: "4 stars",
+        description: "Basic C with some algorithms"        
       },
       "INFO20003":
       {
@@ -34,7 +37,8 @@ Page({
         assig: "20%",
         exam: "80%",
         difficulty: "2 stars",
-        satisfication: "4 stars"
+        satisfication: "4 stars",
+        description: "Database with MySQL"
       },
       "SWEN20003":
       {
@@ -44,7 +48,8 @@ Page({
         assig: "20%",
         exam: "80%",
         difficulty: "2 stars",
-        satisfication: "4 stars"
+        satisfication: "4 stars",
+        description: "Basic Java"
       },
       "COMP30027":
       {
@@ -54,7 +59,8 @@ Page({
         assig: "20%",
         exam: "80%",
         difficulty: "2 stars",
-        satisfication: "4 stars"
+        satisfication: "4 stars",
+        description: "Basic Machine Learning with python"
       },
       "COMP30024":
       {
@@ -64,7 +70,8 @@ Page({
         assig: "20%",
         exam: "80%",
         difficulty: "2 stars",
-        satisfication: "4 stars"
+        satisfication: "4 stars",
+        description: "Basic AI with python"
       },
       "COMP30020":
       {
@@ -90,7 +97,6 @@ Page({
   },
 
   tapSubject: function(event) {
-    
     //console.log("saonima")
     //console.log(event)
     //console.log(event.currentTarget.id)

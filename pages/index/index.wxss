@@ -5,6 +5,12 @@
 
 }
 
+.icon{
+  width:80rpx;
+  height: 80rpx;
+  margin-right: 15px;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;

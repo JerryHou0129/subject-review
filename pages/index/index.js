@@ -10,19 +10,29 @@ Page({
 
     universities: [
       {
-        uni:"墨尔本大学"
+        id:"uom",
+        uni:"墨尔本大学",
+        source:"../../uni_icon/uom.jpg"
       },
       {
-        uni:"莫纳什大学"
+        id:"monash",
+        uni: "莫纳什大学",
+        source: "../../uni_icon/monash.jpg"
       },
       {
-        uni:"RMIT"
+        id:"rmit",
+        uni: "RMIT",
+        source: "../../uni_icon/rmit.jpg"
       },
       {
-        uni:"Deakin"
+        id:"deakin",
+        uni: "Deakin",
+        source: "../../uni_icon/deakin.jpg"
       },
       {
-        uni:"xxxxxxxx"
+        id:"xxx",
+        uni: "xxxxxxxx",
+        source: "../../uni_icon/uom.jpg"
       }
     ],
 

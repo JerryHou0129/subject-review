@@ -6,7 +6,7 @@
     <block wx:for="{{subjects}}">
 
       <view class="each_subject" bindtap='tapSubject' id="{{index}}">
-        <template is="universities" data="{{code:item.code,name:item.name,difficulty:item.difficulty, satisfication:item.satisfication}}" />
+        <template is="universities" data="{{code:item.code,name:item.name,difficulty:item.difficulty, satisfication:item.satisfication, description:item.description}}" />
       </view>
 
     </block>
