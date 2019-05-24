@@ -14,8 +14,7 @@ Page({
         assig: "40%",
         exam: "60%",
         difficulty: "2 stars",
-        satisfication: "4 stars"
-
+        satisfication: "4 stars",
       },
       "COMP10002":
       {
@@ -27,10 +26,10 @@ Page({
         difficulty: "2 stars",
         satisfication: "4 stars"        
       },
-      "COMP20007":
+      "INFO20003":
       {
-        code: "COMP20007",
-        name: "Deisgn of algorithm",
+        code: "INFO20003",
+        name: "Database System",
         content: "What is wrong with this bug No question mark ok", //不能有问号，转不好json
         assig: "20%",
         exam: "80%",
@@ -159,9 +158,15 @@ Page({
     // 跳转
     console.log("saosndoaidjsodjasodjsa")
     console.log(value);
-    wx.navigateTo({
-      url: '../subject_detail/subject_detail?subjects=' + JSON.stringify(this.data.subjects[value]),
-    })
+    console.log(this.data.subjects[value])
+    if (this.data.subjects[value]){
+      wx.navigateTo({
+        url: '../subject_detail/subject_detail?subjects=' + JSON.stringify(this.data.subjects[value])
+      })
+    }
+    else{
+      console.log("wrong code")
+    }
   },
 
   // 返回回调函数

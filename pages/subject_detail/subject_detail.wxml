@@ -2,6 +2,7 @@
 <import src="../subject_detail_template/subject_detail_template.wxml" />
 
 <view>
+    <image class="banner" src= "{{source}}"></image>
     <view class="each_subject"  id="{{index}}">
       <template is="subjects" data="{{code:subjects.code,name:subjects.name, content:subjects.content,difficulty:subjects.difficulty,satisfication:subjects.satisfication}}" />
     </view>

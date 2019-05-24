@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    subjects:null
+    subjects:null,
+    head: "../../subject_img/",
+    tail: ".jpg",
+    source: null
   },
 
   /**
@@ -14,6 +17,8 @@ Page({
   onLoad: function (options) {
     this.setData({subjects: JSON.parse(options.subjects)});
     console.log(this.data.subjects)
+    this.setData({source: this.data.head +this.data.subjects.code+this.data.tail})
+    console.log(this.data.source)
   },
 
   comment:function(event){

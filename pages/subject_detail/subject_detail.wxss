@@ -3,6 +3,10 @@
   background-color: white;
   padding-left: 10px;
 }
+.banner{
+  width: 100%;
+  height: 300rpx;
+}
 .title{
   font: 36px;
   color: #007CC8;
