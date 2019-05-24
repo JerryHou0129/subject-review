@@ -2,8 +2,9 @@
 
 @import "../../weui.wxss";
 .index-container{
-  
+
 }
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -32,7 +33,7 @@ page {
   line-height: 1.6;
 }
 .page-body{
-  padding-top: 60rpx;
+  padding-top: 40rpx;
 }
 .page-section{
   width: 100%;
@@ -48,11 +49,11 @@ page {
 }
 .page-section-gap{
   box-sizing: border-box;
-  padding: 0 30rpx;
+  padding: 0 60rpx;
 }
 .page-section-spacing{
   box-sizing: border-box;
-  padding: 0 80rpx;
+  padding-left: 25px; // slider width
 }
 .page-section-title{
   font-size: 28rpx;

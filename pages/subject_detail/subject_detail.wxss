@@ -5,7 +5,7 @@
 }
 .title{
   font: 36px;
-  color: purple;
+  color: #007CC8;
 }
 .content{
   padding-bottom: 10px;
@@ -23,4 +23,12 @@
 }
 .left{
   text-align: left
+}
+.img{
+  display: inline-block;
+  height: 40rpx;
+  width: 40rpx;
+  padding-right: 5px;
+  padding-top: 5px;
+  float:right;
 }

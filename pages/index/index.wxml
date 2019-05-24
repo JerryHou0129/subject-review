@@ -4,13 +4,15 @@
   <view class="index-container">
     <view class="page-body">
       <view class="page-section page-section-spacing swiper">
-        <swiper class="slide" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
           <block wx:for="{{background}}" wx:key="*this">
+
             <swiper-item>
               <view class="swiper-item {{item}}">
-                 <image src="{{item}}" width="355" height="150"/>
+                 <image src="{{item}}" />
               </view>
             </swiper-item>
+
           </block>
         </swiper>
       </view>
@@ -21,56 +23,55 @@
 
 
 
-
-
-
-
   <view class="weui-cells__title">大学列表</view>
   <view class="weui-cells">
 
-    <block wx:for="{{universities}}">
-      <view class="weui-cell" bindtap="tapUni">
-        <view class="weui-cell__bd">
-          <text>{{item.uni}}</text>
-        </view>
-        <view class="weui-cell__ft">xxx</view>
-      </view>
-    </block>
 
     <view class="weui-cell" bindtap="tapUni">
       <view class="weui-cell__bd">
         <text>墨尔本大学</text>
       </view>
-      <view class="weui-cell__ft">xxx</view>
+      <view class="weui-cell__ft">98 Subjects</view>
     </view>
 
     <view class="weui-cell" bindtap="tapUni">
       <view class="weui-cell__bd">
         <text>莫纳什大学</text>
       </view>
-      <view class="weui-cell__ft">xxx</view>
+      <view class="weui-cell__ft">121 Subjects</view>
     </view>
 
     <view class="weui-cell" bindtap="tapUni">
       <view class="weui-cell__bd">
         <text>RMIT</text>
       </view>
-      <view class="weui-cell__ft">xxx</view>
+      <view class="weui-cell__ft">503 Subjects</view>
     </view>
 
     <view class="weui-cell" bindtap="tapUni">
       <view class="weui-cell__bd">
         <text>Deakin</text>
       </view>
-      <view class="weui-cell__ft">xxx</view>
+      <view class="weui-cell__ft">179 Subjects</view>
     </view>
 
     <view class="weui-cell">
       <view class="weui-cell__bd">
         <text>xxxx大学</text>
       </view>
-      <view class="weui-cell__ft">xxx</view>
+      <view class="weui-cell__ft">203 Subjects</view>
     </view>
+
+
+
+    <block wx:for="{{universities}}">
+      <view class="weui-cell" bindtap="tapUni">
+        <view class="weui-cell__bd">
+          <text>{{item.uni}}</text>
+        </view>
+        <view class="weui-cell__ft">356 Subjects</view>
+      </view>
+    </block>
 
 
   </view>

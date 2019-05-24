@@ -10,10 +10,13 @@
       <text class="right"> {{name}}</text>
     </view>
     <view class="left">难度
-      <text class="right"> {{difficulty}}</text>
+      <image class="img" src="../../images/star_light.png"></image>
+      <image class="img" src="../../images/star_light.png"></image>
     </view>
     <view class="left">满意度
-      <text class="right"> {{satisfication}}</text>
+      <image class="img" src="../../images/star_light.png"></image>
+      <image class="img" src="../../images/star_light.png"></image>
+      <image class="img" src="../../images/star_light.png"></image>
     </view>
 
   </view>
@@ -33,7 +36,7 @@
     <view class="content">{{content}}\n </view>
   </view>
 
-  <button class="weui-btn" type="primary" plain="true">评价这个课程</button>
+  <button class="weui-btn" type="primary" plain="true" bindtap='comment'>评价这个课程</button>
 
   评论区
 </template>

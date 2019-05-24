@@ -1,5 +1,11 @@
 /* pages/uom/uom.wxss */
 @import "../searchbar/searchbar.wxss";
+.img{
+  display: inline-block;
+  height: 40rpx;
+  width: 40rpx;
+  padding-left: 10px;
+}
 .each_subject{
   background-color: white;
 }
@@ -8,7 +14,7 @@
 }
 .title{
   font: 36px;
-  color: purple;
+  color:#007CC8;
   padding-bottom: 10px;
   padding-top: 10px
 }

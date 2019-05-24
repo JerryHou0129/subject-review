@@ -3,13 +3,15 @@
   <view class="abstract">
     <view class="title">{{code}} {{name}} \n</view>
     <view class="one">
-      <view class="left">难度 : {{difficulty}}
-        <text class="right"> 满意度 : {{satisfication}}</text>
+      <view class="left">难度 :
+<image class="img" src="../../images/star_light.png"></image>
+<image class="img" src="../../images/star_light.png"></image>
+<image class="img" src="../../images/star_light.png"></image>
       </view>
     </view>
 
     <view>大一基础计算机</view>
   </view>
   <view class="footer"></view>
-  
+
 </template>
