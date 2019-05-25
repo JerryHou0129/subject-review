@@ -1,23 +1,18 @@
 <!--index.wxml-->
 
 <view>
-  <view class="index-container">
-    <view class="page-body">
-      <view class="page-section page-section-spacing swiper">
-        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
-          <block wx:for="{{background}}" wx:key="*this">
 
-            <swiper-item>
-              <view class="swiper-item {{item}}">
-                 <image src="{{item}}" />
-              </view>
-            </swiper-item>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{background}}" wx:key="*this">
 
-          </block>
-        </swiper>
-      </view>
-    </view>
-  </view>
+        <swiper-item>
+          <view class="swiper-item {{item}}">
+            <image class="img" src="{{item}}" />
+          </view>
+        </swiper-item>
+
+      </block>
+    </swiper>
 
 
 
@@ -36,7 +31,7 @@
     </view>
 
     <view class="weui-cell" bindtap="tapUni">
-    <image class="icon" src="../../uni_icon/monash.jpg"></image>
+      <image class="icon" src="../../uni_icon/monash.jpg"></image>
       <view class="weui-cell__bd">
         <text>莫纳什大学</text>
       </view>
@@ -44,7 +39,7 @@
     </view>
 
     <view class="weui-cell" bindtap="tapUni">
-    <image class="icon" src="../../uni_icon/rmit.jpg"></image>
+      <image class="icon" src="../../uni_icon/rmit.jpg"></image>
       <view class="weui-cell__bd">
         <text>RMIT</text>
       </view>
@@ -52,7 +47,7 @@
     </view>
 
     <view class="weui-cell" bindtap="tapUni">
-    <image class="icon" src="../../uni_icon/deakin.jpg"></image>
+      <image class="icon" src="../../uni_icon/deakin.jpg"></image>
       <view class="weui-cell__bd">
         <text>Deakin</text>
       </view>
@@ -70,7 +65,7 @@
 
     <block wx:for="{{universities}}">
       <view class="weui-cell" bindtap="tapUni">
-      <image class="icon" src="{{item.source}}"></image>
+        <image class="icon" src="{{item.source}}"></image>
         <view class="weui-cell__bd">
           <text>{{item.uni}}</text>
         </view>

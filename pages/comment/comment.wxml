@@ -80,11 +80,13 @@
   <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell">
       <view class="weui-cell__bd">
-        <textarea class="weui-textarea" placeholder="请评价这门课" style="height: 3.3em" bindinput="bindTextAreaChange" value="{{info}}" maxlength="{{maxLen}}" focus/>
+        <textarea class="weui-textarea" placeholder="请评价这门课" style="height: 5.3em" bindinput="bindTextAreaChange" value="{{info}}" maxlength="{{maxLen}}" focus/>
         <view class="weui-textarea-counter">{{nowLen}}/{{maxLen}}</view>
       </view>
     </view>
   </view>
 
+
+  <button class="weui-btn" type="primary" plain="true" bindtap='submit'>发送</button>
 
 </view>
