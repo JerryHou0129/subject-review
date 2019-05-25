@@ -9,7 +9,7 @@
     <view class="left">课程名
       <text class="right"> {{name}}</text>
     </view>
-    
+
     <view class="one">
       <view class="left">难度 :
         <view class="star_block">
@@ -53,7 +53,34 @@
     <image class="qr" src="../../images/qr_code.jpeg"></image>
   </view>
 
-  <button class="weui-btn" type="primary" plain="true" bindtap='comment'>评价这个课程</button>
 
-  评论区
+  <view class="share_add">
+
+    <view class="share">
+      <image class="share_img" src="../../other_img/share.png"></image>
+      <text>分享</text>
+    </view>
+
+    <view class="fav" bindtap="click" style='width:100rpx'>
+      <image class="fav_img" src="{{isClick? '../../other_img/fav1.png': '../../other_img/fav2.png'}}"> </image>
+      <text>{{isClick?'收藏':'已收藏'}}</text>
+    </view>
+
+    <view class="comment">
+      <button class="weui-btn but" type="primary" bindtap='comment'>评价这个课程</button>
+    </view>
+
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
 </template>

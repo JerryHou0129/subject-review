@@ -1,1 +1,49 @@
 /* pages/fav/fav.wxss */
+.banner {
+  width: 100%;
+  height: 300rpx;
+}
+.img{
+  display: inline-block;
+  height: 40rpx;
+  width: 40rpx;
+  padding-left: 10rpx;
+}
+.emoji_block{
+  display: inline-block;
+  margin-left: 200rpx;
+}
+.emoji{
+  display: inline-block;
+  height: 46rpx;
+  width: 46rpx;
+  padding-left: 5rpx;
+}
+.each_subject{
+  background-color: white;
+}
+.abstract{
+  padding-left: 10px;
+}
+.title{
+  font: 36px;
+  color:#007CC8;
+  padding-bottom: 15rpx;
+  padding-top: 15rpx
+}
+.footer{
+  padding-bottom:26rpx;
+  margin-top: 18rpx;
+  background-color: rgba(200, 200, 200, 0.1)
+
+}
+.one{
+  padding-bottom: 18rpx;
+}
+.right{
+  float: right;
+  padding-right: 18rpx
+}
+.left{
+  text-align: left
+}

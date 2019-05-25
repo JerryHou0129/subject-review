@@ -1,2 +1,14 @@
 <!--pages/fav/fav.wxml-->
-<text>pages/fav/fav.wxml</text>
+<import src="../subject_overall_template/subject_overall_template.wxml" />
+<view>
+    <image class="banner" src="../../subject_img/COMP10001.jpg"></image>
+    <block wx:for="{{subjects}}">
+
+      <view class="each_subject" bindtap='tapSubject' id="{{index}}">
+        <template is="universities" data="{{code:item.code,name:item.name,difficulty:item.difficulty, satisfication:item.satisfication, description:item.description}}" />
+      </view>
+
+    </block>
+
+
+</view>

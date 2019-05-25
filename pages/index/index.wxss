@@ -2,7 +2,7 @@
 
 @import "../../weui.wxss";
 swiper{
-  height:300rpx;
+  height:350rpx;
 }
 .img{
   width: 100%;

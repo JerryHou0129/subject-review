@@ -8,7 +8,8 @@ Page({
     subjects:null,
     head: "../../subject_img/",
     tail: ".jpg",
-    source: null
+    source: null,
+    isClick: true,
   },
 
   /**
@@ -27,6 +28,26 @@ Page({
     })
   },
 
+  click:function(event){
+    if (!this.data.isClick == false) {
+      /*let jobData = this.data.jobStorage;
+      jobData.push({
+        jobid: jobData.length,
+        id: this.data.job.id
+      })
+      wx.setStorageSync('jobData', jobData);//设置缓存*/
+      wx.showToast({
+        title: '已收藏',
+      });
+    } else {
+      wx.showToast({
+        title: '已取消收藏',
+      })
+    }
+    this.setData({
+      isClick: !this.data.isClick
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

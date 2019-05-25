@@ -1,59 +1,103 @@
 /* pages/subject_detail/subject_detail.wxss */
-.each_subject{
+
+.each_subject {
   background-color: white;
   padding-left: 18rpx;
 }
-.banner{
+
+.banner {
   width: 100%;
   height: 300rpx;
 }
-.title{
+
+.title {
   font: 36px;
   font-weight: bold;
-  color: #007CC8;
-}
-.content{
-  padding-bottom: 18rpx;
-}
-.footer{
-  padding-bottom:18rpx;
+  color: #007cc8;
 }
 
-.right{
-  float: right;
-  padding-right: 18rpx
+.content {
+  padding-bottom: 18rpx;
 }
-.left{
+
+.footer {
+  padding-bottom: 18rpx;
+}
+
+.right {
+  float: right;
+  padding-right: 18rpx;
+}
+
+.left {
   text-align: left;
 }
-.star{
+
+.star {
   display: inline-block;
   height: 40rpx;
   width: 40rpx;
   padding-right: 10rpx;
 }
-.star_block{
+
+.star_block {
   display: inline-block;
-  margin-left: 375rpx; 
+  margin-left: 375rpx;
 }
 
-.emoji_block{
+.emoji_block {
   display: inline-block;
   margin-left: 340rpx;
 }
-.emoji{
+
+.emoji {
   display: inline-block;
   height: 43rpx;
   width: 43rpx;
   padding-right: 8rpx;
 }
-.one{
+
+.one {
   padding-top: 5rpx;
 }
-.two{
+
+.two {
   padding-bottom: 5rpx;
 }
-.qr{
+
+.qr {
   width: 200rpx;
   height: 200rpx;
 }
+
+.share_add {
+  display: flex;
+}
+
+.but {
+  display: block;
+  width: 400rpx;
+  margin-left: 40rpx;
+}
+
+.fav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.share {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rpx;
+}
+
+.fav_img {
+  height: 70rpx;
+  width: 70rpx;
+}
+.share_img {
+  height: 70rpx;
+  width: 70rpx;
+}
+
