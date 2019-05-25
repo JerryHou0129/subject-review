@@ -16,7 +16,8 @@ Page({
         exam: "60%",
         difficulty: "2 stars",
         satisfication: "4 stars",
-        description: "Basic Python"
+        description: "Basic Python",
+        sample_exam: "扫码获得详细信息"
       },
       "COMP10002":
       {
@@ -27,7 +28,8 @@ Page({
         exam: "70%",
         difficulty: "2 stars",
         satisfication: "4 stars",
-        description: "Basic C with some algorithms"        
+        description: "Basic C with some algorithms",
+        sample_exam: "扫码获得详细信息"        
       },
       "INFO20003":
       {
@@ -38,7 +40,8 @@ Page({
         exam: "80%",
         difficulty: "2 stars",
         satisfication: "4 stars",
-        description: "Database with MySQL"
+        description: "Database with MySQL",
+        sample_exam: "扫码获得详细信息"
       },
       "SWEN20003":
       {
@@ -49,7 +52,8 @@ Page({
         exam: "80%",
         difficulty: "2 stars",
         satisfication: "4 stars",
-        description: "Basic Java"
+        description: "Basic Java",
+        sample_exam: "扫码获得详细信息"
       },
       "COMP30027":
       {
@@ -60,7 +64,8 @@ Page({
         exam: "80%",
         difficulty: "2 stars",
         satisfication: "4 stars",
-        description: "Basic Machine Learning with python"
+        description: "Basic Machine Learning with python",
+        sample_exam: "扫码获得详细信息"
       },
       "COMP30024":
       {
@@ -71,7 +76,8 @@ Page({
         exam: "80%",
         difficulty: "2 stars",
         satisfication: "4 stars",
-        description: "Basic AI with python"
+        description: "Basic AI with python",
+        sample_exam: "扫码获得详细信息"
       },
       "COMP30020":
       {
@@ -81,7 +87,8 @@ Page({
         assig: "20%",
         exam: "80%",
         difficulty: "2 stars",
-        satisfication: "4 stars"
+        satisfication: "4 stars",
+        sample_exam: "扫码获得详细信息"
       },
       "SWEN30006":
       {
@@ -91,7 +98,8 @@ Page({
         assig: "20%",
         exam: "80%",
         difficulty: "2 stars",
-        satisfication: "4 stars"
+        satisfication: "4 stars",
+        sample_exam: "扫码获得详细信息"
       }
     }
   },

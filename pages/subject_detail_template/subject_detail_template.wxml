@@ -9,15 +9,31 @@
     <view class="left">课程名
       <text class="right"> {{name}}</text>
     </view>
-    <view class="left">难度
-      <image class="img" src="../../images/star_light.png"></image>
-      <image class="img" src="../../images/star_light.png"></image>
+    
+    <view class="one">
+      <view class="left">难度 :
+        <view class="star_block">
+          <image class="star" src="../../images/star_light.png"></image>
+          <image class="star" src="../../images/star_light.png"></image>
+          <image class="star" src="../../images/star_light.png"></image>
+          <image class="star" src="../../images/star_light.png"></image>
+          <image class="star" src="../../images/star_light.png"></image>
+        </view>
+      </view>
     </view>
-    <view class="left">满意度
-      <image class="img" src="../../images/star_light.png"></image>
-      <image class="img" src="../../images/star_light.png"></image>
-      <image class="img" src="../../images/star_light.png"></image>
+
+    <view class="two">
+      <view class="left">满意度 :
+        <view class="emoji_block">
+          <image class="emoji" src="../../images/very_sad_n.jpeg"></image>
+          <image class="emoji" src="../../images/sad_n.jpeg"></image>
+          <image class="emoji" src="../../images/neutral_n.jpeg"></image>
+          <image class="emoji" src="../../images/happy_f.jpeg"></image>
+          <image class="emoji" src="../../images/very_happy_n.jpeg"></image>
+        </view>
+      </view>
     </view>
+
 
   </view>
 
@@ -31,9 +47,10 @@
     <view class="content">{{content}}\n </view>
   </view>
 
-    <view>
+  <view>
     <view class="title">Sample Exams</view>
-    <view class="content">{{content}}\n </view>
+    <view class="content">{{sample_exam}}\n </view>
+    <image class="qr" src="../../images/qr_code.jpeg"></image>
   </view>
 
   <button class="weui-btn" type="primary" plain="true" bindtap='comment'>评价这个课程</button>

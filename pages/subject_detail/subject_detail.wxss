@@ -9,6 +9,7 @@
 }
 .title{
   font: 36px;
+  font-weight: bold;
   color: #007CC8;
 }
 .content{
@@ -26,13 +27,36 @@
   padding-right: 10px
 }
 .left{
-  text-align: left
+  text-align: left;
 }
-.img{
+.star{
   display: inline-block;
   height: 40rpx;
   width: 40rpx;
   padding-right: 5px;
+}
+.star_block{
+  display: inline-block;
+  margin-left: 180px; 
+}
+
+.emoji_block{
+  display: inline-block;
+  margin-left: 156px;
+}
+.emoji{
+  display: inline-block;
+  height: 40rpx;
+  width: 43rpx;
+  padding-left: 5px;
+}
+.one{
   padding-top: 5px;
-  float:right;
+}
+.two{
+  padding-bottom: 5px;
+}
+.qr{
+  width: 200rpx;
+  height: 200rpx;
 }
