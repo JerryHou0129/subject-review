@@ -40,7 +40,7 @@ page {
 }
 .page-section-spacing{
   box-sizing: border-box;
-  padding-left: 25px; // slider width
+  padding-left: 25px;
 }
 .page-section-title{
   font-size: 28rpx;
