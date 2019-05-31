@@ -33,11 +33,12 @@
   text-align: left;
 }
 
-.star {
+.img {
   display: inline-block;
   height: 40rpx;
   width: 40rpx;
   padding-right: 10rpx;
+    background-size: 100% 100%;
 }
 
 .star_block {
@@ -50,12 +51,6 @@
   margin-left: 340rpx;
 }
 
-.emoji {
-  display: inline-block;
-  height: 43rpx;
-  width: 43rpx;
-  padding-right: 8rpx;
-}
 
 .one {
   padding-top: 5rpx;
@@ -84,6 +79,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 30rpx;
+  
 }
 
 .share {
@@ -95,9 +91,12 @@
 .fav_img {
   height: 70rpx;
   width: 70rpx;
+  background-size: 100% 100%;
+
 }
+
+
 .share_img {
   height: 70rpx;
   width: 70rpx;
 }
-

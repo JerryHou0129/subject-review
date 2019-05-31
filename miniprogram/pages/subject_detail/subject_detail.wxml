@@ -1,0 +1,9 @@
+<!--pages/subject_detail/subject_detail.wxml-->
+<import src="../subject_detail_template/subject_detail_template.wxml" />
+
+<view>
+    <image class="banner" src="{{source}}"></image>
+    <view class="each_subject"  id="{{index}}">
+      <template is="subject" data="{{code:subject.code,name:subject.name, content:subject.content,difficulty:subject.difficulty,satisfication:subject.satisfication, sample_exam:subject.sample_exam,isClick:isClick}}" />
+    </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/subject_overall_template/subject_overall_template.wxml-->
+<template name="universities">
+  <view class="abstract">
+    <view class="title">{{code}} {{name}} \n</view>
+    <view class="one">
+      <view class="left">难度 :
+        <image class="img star_light" ></image>
+        <image class="img star_light" ></image>
+        <image class="img star_light"></image>
+        <view class="emoji_block">
+          <image class="img very_sad"></image>
+          <image class="img sad"></image>
+          <image class="img neutral"></image>
+          <image class="img happy"></image>
+          <image class="img very_happy" ></image>
+        </view>
+      </view>
+    </view>
+
+    <view>{{description}}</view>
+  </view>
+  <view class="footer"></view>
+
+</template>

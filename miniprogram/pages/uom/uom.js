@@ -1,9 +1,10 @@
 // pages/uom/uom.js
 /*var arr = Object.keys(this.data.subjects);
 console.log(arr.length); //6*/ //数每个学校科目数量
-var WxSearch = require('../searchbar/searchbar.js');
+const WxSearch = require('../searchbar/searchbar.js');
 Page({
   data: {
+    uni_name: "University of Melbourne",
     inputShowed: false,
     inputVal: "",
     subjects: {
@@ -17,7 +18,7 @@ Page({
         difficulty: "2 stars",
         satisfication: "4 stars",
         description: "Basic Python",
-        sample_exam: "扫码获得详细信息"
+        sample_exam: "扫码获得详细信息",
       },
       "COMP10002":
       {
@@ -29,7 +30,7 @@ Page({
         difficulty: "2 stars",
         satisfication: "4 stars",
         description: "Basic C with some algorithms",
-        sample_exam: "扫码获得详细信息"        
+        sample_exam: "扫码获得详细信息",     
       },
       "INFO20003":
       {
@@ -41,7 +42,7 @@ Page({
         difficulty: "2 stars",
         satisfication: "4 stars",
         description: "Database with MySQL",
-        sample_exam: "扫码获得详细信息"
+        sample_exam: "扫码获得详细信息",
       },
       "SWEN20003":
       {
@@ -53,7 +54,7 @@ Page({
         difficulty: "2 stars",
         satisfication: "4 stars",
         description: "Basic Java",
-        sample_exam: "扫码获得详细信息"
+        sample_exam: "扫码获得详细信息",
       },
       "COMP30027":
       {
@@ -65,7 +66,7 @@ Page({
         difficulty: "2 stars",
         satisfication: "4 stars",
         description: "Basic Machine Learning with python",
-        sample_exam: "扫码获得详细信息"
+        sample_exam: "扫码获得详细信息",
       },
       "COMP30024":
       {
@@ -77,7 +78,7 @@ Page({
         difficulty: "2 stars",
         satisfication: "4 stars",
         description: "Basic AI with python",
-        sample_exam: "扫码获得详细信息"
+        sample_exam: "扫码获得详细信息",
       },
       "COMP30020":
       {
@@ -88,7 +89,7 @@ Page({
         exam: "80%",
         difficulty: "2 stars",
         satisfication: "4 stars",
-        sample_exam: "扫码获得详细信息"
+        sample_exam: "扫码获得详细信息",
       },
       "SWEN30006":
       {
@@ -99,7 +100,7 @@ Page({
         exam: "80%",
         difficulty: "2 stars",
         satisfication: "4 stars",
-        sample_exam: "扫码获得详细信息"
+        sample_exam: "扫码获得详细信息",
       }
     }
   },
@@ -111,7 +112,7 @@ Page({
     //console.log(this.data.subjects["comp10001"])
     //console.log(JSON.stringify(this.data.subjects)) 
     wx.navigateTo({
-      url: '../subject_detail/subject_detail?subjects=' + JSON.stringify(this.data.subjects[event.currentTarget.id]),
+      url: '../subject_detail/subject_detail?uni_name='+ this.data.uni_name +'&subject=' + JSON.stringify(this.data.subjects[event.currentTarget.id]),
     })
   },
 

@@ -1,5 +1,5 @@
 <!--pages/subject_detail_template/subject_detail_template.wxml-->
-<template name="subjects">
+<template name="subject">
 
   <view class="one">
 
@@ -13,11 +13,11 @@
     <view class="one">
       <view class="left">难度 :
         <view class="star_block">
-          <image class="star" src="../../images/star_light.png"></image>
-          <image class="star" src="../../images/star_light.png"></image>
-          <image class="star" src="../../images/star_light.png"></image>
-          <image class="star" src="../../images/star_light.png"></image>
-          <image class="star" src="../../images/star_light.png"></image>
+          <image class="img star_light" ></image>
+          <image class="img star_light" ></image>
+          <image class="img star_light" ></image>
+          <image class="img star_light" ></image>
+          <image class="img star_light" ></image>
         </view>
       </view>
     </view>
@@ -25,11 +25,11 @@
     <view class="two">
       <view class="left">满意度 :
         <view class="emoji_block">
-          <image class="emoji" src="../../images/very_sad_n.jpeg"></image>
-          <image class="emoji" src="../../images/sad_n.jpeg"></image>
-          <image class="emoji" src="../../images/neutral_n.jpeg"></image>
-          <image class="emoji" src="../../images/happy_f.jpeg"></image>
-          <image class="emoji" src="../../images/very_happy_n.jpeg"></image>
+          <image class="img very_sad" ></image>
+          <image class="img sad" ></image>
+          <image class="img neutral"></image>
+          <image class="img happy"></image>
+          <image class="img very_happy"></image>
         </view>
       </view>
     </view>
@@ -61,9 +61,9 @@
       <text>分享</text>
     </view>
 
-    <view class="fav" bindtap="click" style='width:100rpx'>
-      <image class="fav_img" src="{{isClick? '../../other_img/fav1.png': '../../other_img/fav2.png'}}"> </image>
-      <text>{{isClick?'收藏':'已收藏'}}</text>
+    <view class="fav" bindtap="add_fav" style='width:100rpx'>
+      <image class="fav_img {{isClick?'star_light':'star_dark'}}"> </image>
+      <text>{{isClick?'已收藏':'收藏'}}</text>
     </view>
 
     <view class="comment">
