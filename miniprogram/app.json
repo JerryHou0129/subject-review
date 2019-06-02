@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/fav/fav",
     "pages/user/user",
-    "pages/uom/uom",
+    "pages/subject_overall/subject_overall",
     "pages/subject_detail/subject_detail",
     "pages/subject_overall_template/subject_overall_template",
     "pages/subject_detail_template/subject_detail_template",

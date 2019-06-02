@@ -13,34 +13,33 @@ Page({
     universities: [{
         id: "uom",
         uni: "墨尔本大学",
-        source: "../../uni_icon/uom.jpg"
+        source: "../../uni_icon/uom.jpg",
+        subjects_num: 356,
       },
       {
         id: "monash",
         uni: "莫纳什大学",
-        source: "../../uni_icon/monash.jpg"
+        source: "../../uni_icon/monash.jpg",
+        subjects_num: 121,
       },
       {
         id: "rmit",
         uni: "RMIT",
-        source: "../../uni_icon/rmit.jpg"
+        source: "../../uni_icon/rmit.jpg",
+        subjects_num: 503,
       },
       {
         id: "deakin",
         uni: "Deakin",
-        source: "../../uni_icon/deakin.jpg"
+        source: "../../uni_icon/deakin.jpg",
+        subjects_num: 179,
       },
-      {
-        id: "xxx",
-        uni: "xxxxxxxx",
-        source: "../../uni_icon/uom.jpg"
-      }
     ],
 
     background: [
-      '../../images/logo2.jpeg',
       'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
-      '../../images/logo_blue.jpeg'
+      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
+      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
     ],
     indicatorDots: true,
     autoplay: true,
@@ -85,10 +84,28 @@ Page({
 
 
 
-
   tapUni: function(event) {
+    var name = event.currentTarget.dataset.name
     wx.navigateTo({
-      url: '../uom/uom',
+      url: '../subject_overall/subject_overall?uni_name='+name,
     })
-  }
+  },
+  onShareAppMessage: function (options) {
+    if (options.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(options.target)
+    }
+    return {
+      title: '分享页面',
+      desc: '各个大学课程的详细资料，快来看一看',
+      success: function (res) {
+        console.log("转发成功:");
+      },
+      fail: function (res) {
+        console.log("转发失败:");
+      }
+    }
+  },
+
 })
+

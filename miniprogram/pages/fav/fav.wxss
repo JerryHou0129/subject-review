@@ -8,6 +8,7 @@
   height: 40rpx;
   width: 40rpx;
   padding-left: 10rpx;
+  background-size: 100% 100%;
 }
 .emoji_block{
   display: inline-block;

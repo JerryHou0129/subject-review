@@ -7,7 +7,7 @@
       <view class="weui-label">课程代码</view>
     </view>
     <view class="weui-cell__bd">
-      <view class="weui-input"  >{{subject.code}}</view>
+      <view class="weui-input">{{subject.code}}</view>
     </view>
   </view>
 
@@ -16,11 +16,13 @@
       <view class="weui-label">所属大学</view>
     </view>
     <view class="weui-cell__bd">
-      <!--><picker class="select" bindchange="bindUniPickerChange" value="{{uni_index}}" range="{{universities}}">
+      <!-->
+      <picker class="select" bindchange="bindUniPickerChange" value="{{uni_index}}" range="{{universities}}">
 
-        <view class="weui-input  weui-select_in-select-after">{{uni_index==-1?'请选择': universities[uni_index]  }}</view>
-      </picker><-->
-       <view class="weui-input">{{uni_name}}</view>
+        <view class="weui-input  weui-select_in-select-after">{{uni_index==-1?'请选择': universities[uni_index] }}</view>
+      </picker>
+      <-->
+        <view class="weui-input">{{uni_name}}</view>
     </view>
   </view>
 
@@ -31,11 +33,12 @@
       <view class="weui-label">学科名字</view>
     </view>
     <view class="weui-cell__bd">
-      <!--><picker class="select" bindchange="bindSubjectPickerChange" value="{{index}}" range="{{name}}">
-        <view class="weui-input  weui-select_in-select-after">{{subject_index==-1?'请选择': name[subject_index]  }}</view>
+      <!-->
+      <picker class="select" bindchange="bindSubjectPickerChange" value="{{index}}" range="{{name}}">
+        <view class="weui-input  weui-select_in-select-after">{{subject_index==-1?'请选择': name[subject_index] }}</view>
         <!-- weui-select 就有右边的框框 
       </picker><-->
-      <view class="weui-input">{{subject.name}}</view>
+        <view class="weui-input">{{subject.name}}</view>
     </view>
   </view>
 
@@ -47,11 +50,11 @@
     <view class="weui-cell__bd">
 
       <view class="star-pos" style="display:flex;flex-direction:row;margin-left:-30rpx">
-        <image class="img {{flag_star>=1?'star_light':'star_dark'}}"  bindtap="changeColor1"></image>
-        <image class="img {{flag_star>=2?'star_light':'star_dark'}}"  bindtap="changeColor2"></image>
-        <image class="img {{flag_star>=3?'star_light':'star_dark'}}"  bindtap="changeColor3"></image>
+        <image class="img {{flag_star>=1?'star_light':'star_dark'}}" bindtap="changeColor1"></image>
+        <image class="img {{flag_star>=2?'star_light':'star_dark'}}" bindtap="changeColor2"></image>
+        <image class="img {{flag_star>=3?'star_light':'star_dark'}}" bindtap="changeColor3"></image>
         <image class="img {{flag_star>=4?'star_light':'star_dark'}}" bindtap="changeColor4"></image>
-        <image class="img {{flag_star>=5?'star_light':'star_dark'}}"  bindtap="changeColor5"></image>
+        <image class="img {{flag_star>=5?'star_light':'star_dark'}}" bindtap="changeColor5"></image>
       </view>
 
     </view>
@@ -66,10 +69,10 @@
 
       <view class="star-pos" style="display:flex;flex-direction:row;margin-left:-35rpx">
         <image class="emoji {{flag_emoji==1?'very_sad_f':'very_sad'}}" bindtap="changeEmoji1"></image>
-        <image class="emoji {{flag_emoji==2?'sad_f':'sad'}}"  bindtap="changeEmoji2"></image>
-        <image class="emoji {{flag_emoji==3?'neutral_f':'neutral'}}"  bindtap="changeEmoji3"></image>
+        <image class="emoji {{flag_emoji==2?'sad_f':'sad'}}" bindtap="changeEmoji2"></image>
+        <image class="emoji {{flag_emoji==3?'neutral_f':'neutral'}}" bindtap="changeEmoji3"></image>
         <image class="emoji {{flag_emoji==4?'happy_f':'happy'}}" bindtap="changeEmoji4"></image>
-        <image class="emoji {{flag_emoji==5?'very_happy_f':'very_happy'}}"  bindtap="changeEmoji5"></image>
+        <image class="emoji {{flag_emoji==5?'very_happy_f':'very_happy'}}" bindtap="changeEmoji5"></image>
       </view>
 
 

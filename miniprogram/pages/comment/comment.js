@@ -2,17 +2,19 @@
 const app = getApp()
 const db = wx.cloud.database()
 Page({
-  onLoad(options){
+  onLoad(options) {
     console.log(options)
-    this.setData({ subject: JSON.parse(options.subject) });
-    this.setData({ uni_name: options.uni_name });
+    this.setData({
+      subject: JSON.parse(options.subject)
+    });
+    this.setData({
+      uni_name: options.uni_name
+    });
   },
-  /**
-   * 页面的初始数据
-   */
+
   data: {
-    uni_name:null,
-    subject:null,
+    uni_name: null,
+    subject: null,
     universities: ['UoM', 'Monash', 'RMIT', 'Deakin'],
     code: ['COMP10001', 'COMP10002', 'INFO20003', 'SWEN30006'],
     //todo
@@ -32,7 +34,7 @@ Page({
       uni_index: e.detail.value
     })
   },
-  bindSubjectPickerChange: function (e) {
+  bindSubjectPickerChange: function(e) {
     console.log('携带值', e.detail.value)
     this.setData({
       subject_index: e.detail.value
@@ -114,7 +116,7 @@ Page({
 
   submit: function(event) {
     var that = this;
-    if(that.data.uni_index==-1||that.data.subject_index==-1||that.data.flag_emoji==0||that.data.flag_emoji==0){
+    if ( that.data.flag_star == 0 || that.data.flag_emoji == 0) {
       wx.showToast({
         title: '发布失败',
         icon: 'none',
@@ -162,7 +164,7 @@ Page({
       }
     })
 
-    setTimeout(function(){
+    setTimeout(function() {
       wx.navigateBack({
         delta: 2
       })

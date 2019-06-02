@@ -2,7 +2,22 @@
 const app = getApp()
 const db = wx.cloud.database()
 Page({
-
+ onShareAppMessage: function (options) {
+    if (options.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(options.target)
+    }
+    return {
+      title: '分享页面',
+      desc: '科目分享，快来看一看', 
+      success: function (res) {
+        console.log("转发成功:");
+      },
+      fail: function (res) {
+        console.log("转发失败:");
+      }
+    }
+  },
   /**
    * 页面的初始数据
    */
@@ -124,4 +139,6 @@ Page({
     })
   },
 
+ 
+ 
 })

@@ -56,15 +56,24 @@
 
   <view class="share_add">
 
-    <view class="share">
-      <image class="share_img" src="../../other_img/share.png"></image>
+
+
+    <view class="share" >
+    <button class="share_fav_but" open-type="share">
+      <view class="share_img share_icon"> </view>
       <text>分享</text>
+      </button>
     </view>
 
-    <view class="fav" bindtap="add_fav" style='width:100rpx'>
+
+
+    <view class="fav" bindtap="add_fav">
+     <button class="share_fav_but">
       <image class="fav_img {{isClick?'star_light':'star_dark'}}"> </image>
       <text>{{isClick?'已收藏':'收藏'}}</text>
+      </button>
     </view>
+
 
     <view class="comment">
       <button class="weui-btn but" type="primary" bindtap='comment'>评价这个课程</button>

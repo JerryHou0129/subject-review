@@ -1,4 +1,4 @@
-/* pages/uom/uom.wxss */
+
 @import "../searchbar/searchbar.wxss";
 .img{
   display: inline-block;
