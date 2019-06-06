@@ -1,12 +1,18 @@
 const app = getApp()
 Page({
   data: {
+    title: '极客教育',
+    barBg: '#f8f8f8',//#ff6600
+    color: '#000000',//#ffffff
+
     fav_data: null,
   },
 
   tapSubject: function(event) {
+    app.globalData.uni_name = this.data.fav_data[event.currentTarget.id].uni_name
+    app.globalData.this_subject = this.data.fav_data[event.currentTarget.id].fav
     wx.navigateTo({
-      url: '../subject_detail/subject_detail?uni_name=' + this.data.fav_data[event.currentTarget.id].uni_name + '&subject=' + JSON.stringify(this.data.fav_data[event.currentTarget.id].fav),
+      url: '../subject_detail/subject_detail'
     })
   },
 

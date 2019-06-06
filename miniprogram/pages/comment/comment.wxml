@@ -1,5 +1,5 @@
 <!--pages/comment/comment.wxml-->
-
+ <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" ></navigationBar>
 
 <view class="weui-cells weui-cells_after-title">
   <view class="weui-cell weui-cell_input">
@@ -38,7 +38,7 @@
         <view class="weui-input  weui-select_in-select-after">{{subject_index==-1?'请选择': name[subject_index] }}</view>
         <!-- weui-select 就有右边的框框 
       </picker><-->
-        <view class="weui-input">{{subject.name}}</view>
+        <view class="weui-input" >{{subject.name}}</view>
     </view>
   </view>
 
@@ -86,7 +86,7 @@
   <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell">
       <view class="weui-cell__bd">
-        <textarea class="weui-textarea" placeholder="请评价这门课" style="height: 5.3em" bindinput="bindTextAreaChange" value="{{info}}" maxlength="{{maxLen}}" focus/>
+        <textarea class="weui-textarea" show-confirm-bar="{{false}}" placeholder="请评价这门课" style="height: 5.3em" bindinput="bindTextAreaChange" value="{{info}}" maxlength="{{maxLen}}" />
         <view class="weui-textarea-counter">{{nowLen}}/{{maxLen}}</view>
       </view>
     </view>

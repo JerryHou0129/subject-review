@@ -212,6 +212,8 @@ icon {
   height: 2.58823529em;
   min-height: 2.58823529em;
   line-height: 2.58823529em;
+  margin-left: -15rpx;
+  margin-right: -25rpx;
 }
 
 .weui-toptips {

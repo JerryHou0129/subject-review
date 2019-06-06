@@ -1,5 +1,4 @@
 <!--pages/searchbar/searchbar.wxml-->
-
 <view class="page__bd">
 
 
@@ -31,9 +30,9 @@
 
 
 
-  <view class="wxSearch" bindtap='hideInput' style="'block';height:{{wxSearchData.view.seachHeight}}px;top:{{wxSearchData.view.barHeight}}px;" hidden="{{!inputShowed}}">
+  <view class="wxSearch" bindtap='hideInput' style="'block';height:{{wxSearchData.view.seachHeight}}px;top:{{wxSearchData.view.barHeight}}px; margin-top:{{pad+h}}px" hidden="{{!inputShowed}}">
     <view class="wxSearchInner">
-
+      
 
 
       <!-- 搜索提示部分 -->

@@ -3,24 +3,22 @@ const app = getApp()
 const db = wx.cloud.database()
 Page({
   onLoad(options) {
-    console.log(options)
     this.setData({
-      subject: JSON.parse(options.subject)
+      subject: app.globalData.this_subject,
+      uni_name: app.globalData.uni_name
     });
-    this.setData({
-      uni_name: options.uni_name
-    });
+    console.log(this.data.subject);
+      console.log(this.data.uni_name);
   },
 
   data: {
+    title: '极客教育',
+    barBg: '#f8f8f8',//#ff6600
+    color: '#000000',//#ffffff
+
     uni_name: null,
     subject: null,
-    universities: ['UoM', 'Monash', 'RMIT', 'Deakin'],
-    code: ['COMP10001', 'COMP10002', 'INFO20003', 'SWEN30006'],
-    //todo
-    name: ['Foundation of Computing', 'Foundation of Algorithm', 'Database System', 'Software Modelling Design'],
-    uni_index: -1,
-    subject_index: -1,
+
     maxLen: 200, // 最多放多少字
     info: "",
     nowLen: 0, //备注当前字数
@@ -143,10 +141,11 @@ Page({
       data: {
         comment: this.data.info,
         difficulty: this.data.flag_star,
-        satisfication: this.data.flag_emoji,
-        uni_name: this.data.universities[this.data.uni_index],
-        subject_name: this.data.name[this.data.subject_index],
-        code: this.data.code
+        satisfaction: this.data.flag_emoji,
+        uni_name: this.data.uni_name,
+        subject_name: this.data.subject.name,
+        code: this.data.subject.code,
+        is_comment: true
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id

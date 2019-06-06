@@ -1,10 +1,11 @@
 <!--pages/fav/fav.wxml-->
 <import src="../subject_overall_template/subject_overall_template.wxml" />
 <view>
+  <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" ></navigationBar>
   <image class="banner" src="../../subject_img/COMP10001.png"></image>
   <block wx:for="{{fav_data}}">
     <view class="each_subject" bindtap='tapSubject' id="{{index}}">
-      <template is="universities" data="{{code:item.fav.code,name:item.fav.name,difficulty:item.fav.difficulty, satisfication:item.fav.satisfication, description:item.fav.description}}" />
+      <template is="universities" data="{{code:item.fav.code,name:item.fav.name,difficulty:item.fav.difficulty, satisfaction:item.fav.satisfaction, description:item.fav.description}}" />
     </view>
 
   </block>

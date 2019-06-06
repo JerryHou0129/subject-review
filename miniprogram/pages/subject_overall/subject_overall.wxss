@@ -7,10 +7,7 @@
   padding-left: 10rpx;
   background-size: 100% 100%;
 }
-.emoji_block{
-  display: inline-block;
-  margin-left: 200rpx;
-}
+
 
 .each_subject{
   background-color: white;
@@ -19,9 +16,10 @@
   padding-left: 10px;
 }
 .title{
-  font: 36px;
+  font-weight: 500;
+  font: 48px;
   color:#007CC8;
-  padding-bottom: 15rpx;
+  padding-bottom: 10rpx;
   padding-top: 15rpx
 }
 .footer{
@@ -30,13 +28,29 @@
   background-color: rgba(200, 200, 200, 0.1)
 
 }
-.one{
-  padding-bottom: 18rpx;
-}
+
 .right{
   float: right;
   padding-right: 18rpx
 }
 .left{
   text-align: left
+}
+
+.star_block {
+  display: inline-block;
+  margin-left: 375rpx;
+}
+
+.emoji_block {
+  display: inline-block;
+  margin-left: 340rpx;
+}
+
+.one {
+  padding-top: 5rpx;
+}
+
+.two {
+  padding-bottom: 5rpx;
 }

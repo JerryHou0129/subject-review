@@ -3,6 +3,11 @@
 const app = getApp()
 Page({
   data: {
+    title: '极客教育',
+    barBg: '#f8f8f8',//#ff6600
+    color: '#000000',//#ffffff
+
+
     avatarUrl: './user-unlogin.png',
     userInfo: {},
     logged: false,
@@ -11,25 +16,25 @@ Page({
 
 
     universities: [{
-        id: "uom",
+        id: "University of Melbourne",
         uni: "墨尔本大学",
         source: "../../uni_icon/uom.jpg",
         subjects_num: 356,
       },
       {
-        id: "monash",
+        id: "Monash",
         uni: "莫纳什大学",
         source: "../../uni_icon/monash.jpg",
         subjects_num: 121,
       },
       {
-        id: "rmit",
+        id: "RMIT",
         uni: "RMIT",
         source: "../../uni_icon/rmit.jpg",
         subjects_num: 503,
       },
       {
-        id: "deakin",
+        id: "Deakin",
         uni: "Deakin",
         source: "../../uni_icon/deakin.jpg",
         subjects_num: 179,
@@ -50,7 +55,6 @@ Page({
     nextMargin: 0
   },
   onLoad: function() {
-
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -58,6 +62,7 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
+              console.log(res.userInfo)
               this.setData({
                 avatarUrl: res.userInfo.avatarUrl,
                 userInfo: res.userInfo,
@@ -84,10 +89,12 @@ Page({
 
 
 
+
   tapUni: function(event) {
     var name = event.currentTarget.dataset.name
+    app.globalData.uni_name = name
     wx.navigateTo({
-      url: '../subject_overall/subject_overall?uni_name='+name,
+      url: '../subject_overall/subject_overall',
     })
   },
   onShareAppMessage: function (options) {

@@ -13,11 +13,11 @@
     <view class="one">
       <view class="left">难度 :
         <view class="star_block">
-          <image class="img star_light" ></image>
-          <image class="img star_light" ></image>
-          <image class="img star_light" ></image>
-          <image class="img star_light" ></image>
-          <image class="img star_light" ></image>
+          <image class="img {{difficulty>=1?'star_light':'star_dark'}}"></image>
+          <image class="img {{difficulty>=2?'star_light':'star_dark'}}"></image>
+          <image class="img {{difficulty>=3?'star_light':'star_dark'}}"></image>
+          <image class="img {{difficulty>=4?'star_light':'star_dark'}}"></image>
+          <image class="img {{difficulty>=5?'star_light':'star_dark'}}"></image>
         </view>
       </view>
     </view>
@@ -25,11 +25,11 @@
     <view class="two">
       <view class="left">满意度 :
         <view class="emoji_block">
-          <image class="img very_sad" ></image>
-          <image class="img sad" ></image>
-          <image class="img neutral"></image>
-          <image class="img happy"></image>
-          <image class="img very_happy"></image>
+          <image class="img {{satisfaction==1?'very_sad_f':'very_sad'}}"></image>
+          <image class="img {{satisfaction==2?'sad_f':'sad'}}"></image>
+          <image class="img {{satisfaction==3?'neutral_f':'neutral'}}"></image>
+          <image class="img {{satisfaction==4?'happy_f':'happy'}}"></image>
+          <image class="img {{satisfaction==5?'very_happy_f':'very_happy'}}"></image>
         </view>
       </view>
     </view>
@@ -58,19 +58,19 @@
 
 
 
-    <view class="share" >
-    <button class="share_fav_but" open-type="share">
-      <view class="share_img share_icon"> </view>
-      <text>分享</text>
+    <view class="share">
+      <button class="share_fav_but" open-type="share">
+        <view class="share_img share_icon"> </view>
+        <text>分享</text>
       </button>
     </view>
 
 
 
     <view class="fav" bindtap="add_fav">
-     <button class="share_fav_but">
-      <image class="fav_img {{isClick?'star_light':'star_dark'}}"> </image>
-      <text>{{isClick?'已收藏':'收藏'}}</text>
+      <button class="share_fav_but">
+        <image class="fav_img {{isClick?'star_light':'star_dark'}}"> </image>
+        <text>{{isClick?'已收藏':'收藏'}}</text>
       </button>
     </view>
 

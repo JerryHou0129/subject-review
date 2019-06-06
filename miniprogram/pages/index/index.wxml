@@ -1,6 +1,8 @@
 <!--index.wxml-->
 <view>
+  <navigationBar id="navigationBar" color="{{color}}" title="{{title}}" back="{{false}}" background="{{barBg}}"></navigationBar>
 
+  
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
     <block wx:for="{{background}}" wx:key="*this">
 

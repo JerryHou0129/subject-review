@@ -1,5 +1,6 @@
 /** 整个区域 */
 .wxSearch{
+  margin-top: 64px;
   position: absolute;
   top: 43px;
   left: 0;
