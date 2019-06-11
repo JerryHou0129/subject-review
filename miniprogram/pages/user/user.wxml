@@ -1,6 +1,6 @@
 <!--pages/user/user.wxml-->
 <view>
-    <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" ></navigationBar>
+    <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{false}}" background="{{barBg}}" ></navigationBar>
 
   <view class="userinfo">
     <view class="userinfo-avatar">

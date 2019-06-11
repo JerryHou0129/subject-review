@@ -4,7 +4,7 @@
 
   
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
-    <block wx:for="{{background}}" wx:key="*this">
+    <block wx:for="{{background}}" wx:key="unique">
 
       <swiper-item>
         <view class="swiper-item {{item}}">
@@ -19,7 +19,7 @@
   <view class="weui-cells__title">大学列表</view>
   <view class="weui-cells">
 
-    <block wx:for="{{universities}}">
+    <block wx:for="{{universities}}" wx:key="unique">
       <view class="weui-cell" bindtap="tapUni" data-name="{{item.id}}">
         <image class="icon" src="{{item.source}}"></image>
         <view class="weui-cell__bd">

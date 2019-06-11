@@ -56,8 +56,6 @@
 
   <view class="share_add">
 
-
-
     <view class="share">
       <button class="share_fav_but" open-type="share">
         <view class="share_img share_icon"> </view>
@@ -81,6 +79,41 @@
 
   </view>
 
+
+  <view class="footer"></view>
+
+
+<!-->
+  <scroll-view class='talk-body' scroll-y="true" bindscrolltolower="onScrollLoad">
+
+    <view class='talk-item' wx:for="{{talks}}" wx:key="*this">
+
+      <view class='talk-item-left'>
+
+        <image class='talk-item-face' src='{{item.avatarUrl}}'></image>
+
+      </view>
+
+      <view class='talk-item-right'>
+
+        <view class='right-left'>
+
+          <text class='talk-item-nickname'>{{item.nickName}}</text>
+
+          <text class='talk-item-time'>{{item.talkTime}}</text>
+
+        </view>
+
+        <text class='talk-item-content'>{{item.content}}</text>
+
+
+
+      </view>
+
+    </view>
+
+  </scroll-view>
+<-->
 
 
 

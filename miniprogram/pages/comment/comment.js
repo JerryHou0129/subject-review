@@ -8,13 +8,13 @@ Page({
       uni_name: app.globalData.uni_name
     });
     console.log(this.data.subject);
-      console.log(this.data.uni_name);
+    console.log(this.data.uni_name);
   },
 
   data: {
     title: '极客教育',
-    barBg: '#f8f8f8',//#ff6600
-    color: '#000000',//#ffffff
+    barBg: '#f8f8f8', //#ff6600
+    color: '#000000', //#ffffff
 
     uni_name: null,
     subject: null,
@@ -114,12 +114,12 @@ Page({
 
   submit: function(event) {
     var that = this;
-    if ( that.data.flag_star == 0 || that.data.flag_emoji == 0) {
+    if (that.data.flag_star == 0 || that.data.flag_emoji == 0) {
       wx.showToast({
         title: '发布失败',
         icon: 'none',
         duration: 1000,
-        mask: false,
+        mask: true,
       })
       return
     }
@@ -127,7 +127,7 @@ Page({
       title: '发布成功',
       icon: 'success',
       duration: 1500,
-      mask: false,
+      mask: true,
       success: function() {
         that.setData({
           info: '',
@@ -163,11 +163,84 @@ Page({
       }
     })
 
-    setTimeout(function() {
-      wx.navigateBack({
-        delta: 2
+    // db.collection('ranking').doc('todo-identifiant-aleatoire').get().then(res => {
+    //   console.log("sadaaaaaaa")
+    //   console.log(res.data)
+    // })
+
+  //db.collection('ranking').doc(this.data.uni_name + this.data.subject.code).get().catch(console.log("kkkkkk"))
+
+    // 异步处理，不成功
+    // db.collection('ranking').doc(this.data.uni_name + this.data.subject.code).get({
+    //   success: function(res) {
+    //     console.log("update")
+    //     const _ = db.command
+    //     db.collection("ranking").doc(this.data.uni_name + this.data.subject.code).update({
+    //       data: {
+    //         difficulty: _.inc(this.data.flag_star),
+    //         satisfaction: _.inc(this.data.flag_emoji),
+    //       }
+    //     })
+    //   },
+    //   fail: function(res) {
+    //     console.log("adddddd")
+    //     db.collection('ranking').add({
+    //       _id: this.data.uni_name + this.data.subject.code,
+    //       data: {
+    //         difficulty: this.data.flag_star,
+    //         satisfaction: this.data.flag_emoji
+    //       },
+    //       success: function(res) {
+    //         // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+    //         console.log("gaomaoxian")
+    //         console.log(res)
+    //       },
+    //       fail:console.log("rinima"),
+    //       complete:console.log("compele")
+    //     })
+    //   }
+    // })
+
+  //同步处理
+    db.collection(this.data.uni_name).doc(this.data.subject.code).get().then(res => {
+      console.log("update")
+      const _ = db.command
+      db.collection(this.data.uni_name).doc(this.data.subject.code).update({
+        data: {
+          difficulty: _.inc(this.data.flag_star),
+          satisfaction: _.inc(this.data.flag_emoji),
+          count: _.inc(1),
+        }
       })
-    }, 1500)
+    }).catch(res => {
+      db.collection(this.data.uni_name).add({
+        data: {
+          _id: this.data.subject.code,
+          difficulty: this.data.flag_star,
+          satisfaction: this.data.flag_emoji,
+          count: 1
+        },
+      })
+    })
+
+
+    wx.cloud.callFunction({
+      name: 'update_subject_detail',
+      data: {
+        subject: app.globalData.this_subject,
+        uni_name: app.globalData.uni_name,
+      },
+      success: function(res) {
+        app.globalData.subjects[app.globalData.this_subject.code]['difficulty'] = res.result.diff
+        app.globalData.subjects[app.globalData.this_subject.code]['satisfaction'] = res.result.sat
+        wx.setStorageSync(app.globalData.uni_name, app.globalData.subjects)
+        console.log(app.globalData.subjects)
+        wx.navigateBack({
+          delta: 2
+        })
+      },
+      fail: console.error
+    })
 
   }
 })

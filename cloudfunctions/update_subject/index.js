@@ -25,21 +25,7 @@ exports.main = async(event, context) => {
   for (k = 0; k < length; k++) {
     temp = subjects[Object.keys(subjects)[k]].code
     res[temp] = await (db.collection('users').where({
-      is_comment: true,
-      wx.showToast({
-        title: '数据加载中',
-        icon: 'loading',
-        duration: 3000
-      });
-
-
-
-
-
-    
-
-
-    
+      is_comment: true,    
       uni_name: uni_name,
       code: subjects[Object.keys(subjects)[k]].code
     }).get())

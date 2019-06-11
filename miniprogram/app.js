@@ -17,13 +17,18 @@ App({
       })
     }
 
+
+
   },
 
   globalData: {
+    all_uni: ["UoM", "Monash", "RMIT", "Deakin"],
     openid:null,
     uni_name: null,
     subjects:null,
     this_subject: null,
+    fav_subjects: {},
+    isClick: false,
     share: false,  // 分享默认为false
   }
 })

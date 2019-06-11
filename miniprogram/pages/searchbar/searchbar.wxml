@@ -8,7 +8,7 @@
 
       <view class="weui-search-bar__box">
         <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-        <input type="text" class="weui-search-bar__input" placeholder="搜索课程信息" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindinput="wxSearchInput" bindconfirm="wxSearchConfirm" />
+        <input type="text" class="weui-search-bar__input" placeholder="输入课程代码或名字" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindinput="wxSearchInput" bindconfirm="wxSearchConfirm" />
         <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput" bindtap="wxSearchClear">
           <icon type="clear" size="14"></icon>
         </view>
@@ -17,7 +17,7 @@
 
       <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
         <icon class="weui-icon-search" type="search" size="14"></icon>
-        <view class="weui-search-bar__text">输入课程代码或名字</view>
+        <view class="weui-search-bar__text">搜索 下拉更新课程信息</view>
       </label>
 
 
@@ -38,7 +38,7 @@
       <!-- 搜索提示部分 -->
       <view class="wxSearchMindKey" hidden="{{!inputShowed}}">
         <view class="wxSearchMindKeyList">
-          <block wx:for="{{wxSearchData.tipKeys}}">
+          <block wx:for="{{wxSearchData.tipKeys}}" wx:key="unique">
             <view class="wxSearchMindKeyItem" bindtap="wxSearchKeyTap" data-key="{{item}}">
               {{item}}
             </view>

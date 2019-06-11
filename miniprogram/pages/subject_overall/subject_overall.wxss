@@ -26,7 +26,6 @@
   padding-bottom:26rpx;
   margin-top: 18rpx;
   background-color: rgba(200, 200, 200, 0.1)
-
 }
 
 .right{

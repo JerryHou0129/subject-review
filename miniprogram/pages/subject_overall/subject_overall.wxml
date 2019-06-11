@@ -4,7 +4,7 @@
  <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" ></navigationBar>
   <include src="../searchbar/searchbar" />
 
-    <block wx:for="{{subjects}}" >
+    <block wx:for="{{subjects}}"  wx:key="unique">
 
       <view class="each_subject" bindtap='tapSubject' id="{{index}}">
         <template is="universities" data="{{code:item.code,name:item.name,difficulty:item.difficulty, satisfaction:item.satisfaction, description:item.description}}" />

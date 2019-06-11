@@ -140,12 +140,12 @@ Component({
       this.triggerEvent('back');
     },
     runBack(){
-      let pages = getCurrentPages();
+      /*let pages = getCurrentPages();
       if (pages.length < 2 && pages[0].route != __wxConfig.pages[0]) {
         wx.reLaunch({ url: '/' + __wxConfig.pages[0] })
-      } else {
+      } else {*/
         wx.navigateBack({ delta: 1 });
-      }
+      //}
     },
     /**
      * 返回首页

@@ -2,8 +2,8 @@
 /*var arr = Object.keys(this.data.subjects);
 console.log(arr.length); //6*/ //数每个学校科目数量
 const app = getApp()
+const db = wx.cloud.database()
 const WxSearch = require('../searchbar/searchbar.js');
-var GlobalUniData
 Page({
   
   data: {
@@ -56,8 +56,7 @@ Page({
   },
 
   onLoad: function (options){
-    const UniData = require('../../data/' + app.globalData.uni_name + '_data.js');
-    GlobalUniData = UniData
+
     this.setData({
       pad: app.globalData.pad,
       h: app.globalData.h
@@ -65,26 +64,12 @@ Page({
   },
 
   onShow: function(options) {
-    wx.cloud.callFunction({
-      // 云函数名称
-      name: 'update_subject',
-      // 传给云函数的参数
-      data: {
-        subjects: GlobalUniData.subjects,
-        uni_name: GlobalUniData.uni_name
-      },
-      success: function (res) {
-        that.setData({
-          subjects: res.result.subjects
-        })
-      },
-      fail: console.error
-    })
     
     this.setData({
-      subjects: GlobalUniData.subjects,
-      uni_name: GlobalUniData.uni_name
+      subjects: app.globalData.subjects,
+      uni_name: app.globalData.uni_name
     })
+
     var that = this;
     var each;
     var subjects = that.data.subjects
@@ -98,22 +83,6 @@ Page({
       that.mySearchFunction, // 提供一个搜索回调函数
       that.myGobackFunction //提供一个返回回调函数
     );
-
-
-    
-//to do list
-
-
-
-
-
-
-
-
-
-    //--------------------------------------------------------
-   
-
   },
 
 
@@ -138,7 +107,7 @@ Page({
       console.log("wrong code")
     }
   },
-
+  
   // 返回回调函数
   myGobackFunction: function() {
     // do your job here
@@ -164,5 +133,26 @@ Page({
         console.log("转发失败:");
       }
     }
+  },
+
+  onPullDownRefresh: function () {
+    wx.showNavigationBarLoading() //在标题栏中显示加载
+    wx.showLoading({
+      title: '正在刷新',
+      mask: true
+    })
+    db.collection(app.globalData.uni_name).get().then(res => {
+      for (var each of res.data) {
+        app.globalData.subjects[each._id]["difficulty"] = Math.round(each.difficulty / each.count)
+        app.globalData.subjects[each._id]["satisfaction"] = Math.round(each.satisfaction / each.count)
+      }
+      this.setData({
+        subjects: app.globalData.subjects,
+      })
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+      wx.hideLoading()
+    })
+
   },
 })
